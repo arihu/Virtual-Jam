@@ -19,7 +19,7 @@ keys.forEach((key) => {
     key.addEventListener('mousedown', (e) => {
         const pressedKey = key.dataset.note;
         console.log("Pressed Piano Note: " + pressedKey);
-        playSound(pressedKey, Instrument.Piano);
+        // playSound(pressedKey, Instrument.Piano);
         socket.emit('notePress', {note: pressedKey, instrument: Instrument.Piano});
     });
 });
